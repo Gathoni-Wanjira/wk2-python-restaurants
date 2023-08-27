@@ -1,11 +1,17 @@
+from Review import Review
+
+
 class Customer:
     
     customers = []
-     
+    
+    
+    #  Instance Attributes
     def __init__(self , first_name , last_name):
         self.first_name = first_name
         self.last_name = last_name
         self.customers.append(self)
+        self.all_reviews = []
         
     @property
     def given_name(self):
@@ -30,5 +36,13 @@ class Customer:
     def all (cls):
         return cls.customers
     
-    def add_review (self , restaurants, rating)
+    # Object Relationship
     
+    def add_review (self , restaurants, rating):
+            customer_review = (Review(self, restaurants=restaurants, rating=rating))
+            self.all_reviews.append(customer_review)
+            
+    
+    def resturants(self):
+        return list ({review.restaurants for review in self.all_reviews})
+        

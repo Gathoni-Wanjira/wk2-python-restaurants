@@ -16,5 +16,5 @@ class Review:
     def all(cls):
         return cls.all_review
         
-        
+        # Object Relationship
     

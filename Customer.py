@@ -45,4 +45,21 @@ class Customer:
     
     def resturants(self):
         return list ({review.restaurants for review in self.all_reviews})
+    
+    # Aggregate and Association Methods
+    
+    def num_reviews(self):
+        return len([review for review in Review.all_review if review.customer.full_name == self.full_name])
+       
+    
+    def find_by_name(cls, name):
+        for Customer in cls.customers:
+            if Customer.full_name == name:
+                return Customer
+    
+    def find_all_by_given_name(cls,name):
+        return [Customer.given_name for Customer in cls.customers if Customer.given_name == name]
+      
+    
+    
         

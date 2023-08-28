@@ -17,4 +17,11 @@ class Review:
         return cls.all_review
         
         # Object Relationship
+        
+    @property  
+    def customer(self):
+        return self.a_customer  
+    
+    def restaurant(self):
+        return self.a_resturant
     

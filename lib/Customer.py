@@ -1,4 +1,4 @@
-from Review import Review
+from lib.Review import Review
 
 
 class Customer:

@@ -1,6 +1,6 @@
-from Customer import Customer
-from Restaurant import Restaurant
-from Review import Review
+from lib.Customer import Customer
+from lib.Restaurant import Restaurant
+from lib.Review import Review
 
 
 # Customers objects
